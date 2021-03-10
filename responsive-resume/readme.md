@@ -1,0 +1,1 @@
+In this lab, the goal is to recreat the resume that is found in the attached PDF.
