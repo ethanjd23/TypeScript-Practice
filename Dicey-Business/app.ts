@@ -37,9 +37,7 @@ function rollDie() {
     };
 };
 
-let testArray = [1, 2, 3, 4, 5]
-
 function sumDice() {
     let sum = dieArray.reduce((a, b) => a + b.value, 0);
     console.log(sum);
-}
+};

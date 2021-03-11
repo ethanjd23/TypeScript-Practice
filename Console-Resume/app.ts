@@ -1,25 +1,25 @@
-let myFirstName: string = "Ethan Delcambre";
+let myName: string = "Ethan Delcambre";
 let career = "Web Developer";
 let desc = "I don't know anything";
-let interests = ["Cooking", "Coffee", "Vinyl", "Gaming", "Reading"];
-let experience = [
+let interests: string[] = ["Cooking", "Coffee", "Vinyl", "Gaming", "Reading"];
+let experience: { company: string; title: string; jobDescription: string}[] = [
   {
     company: "TruFund Financial Services",
     title: "Marketing Intern",
-    jobdescription: "Research local small business' financial needs",
+    jobDescription: "Research local small business' financial needs",
   },
   {
     company: "Chicken Salad Chick",
     title: "Team Member",
-    jobdescription: "Cashier, line cook, and prep team",
+    jobDescription: "Cashier, line cook, and prep team",
   },
   {
     company: "Alabama Broadcasters' Association",
     title: "Intern",
-    jobdescription: "Created Marketing Material and organized convention",
+    jobDescription: "Created Marketing Material and organized convention",
   },
 ];
-let skills = [
+let skills: {skill: string; cool: boolean}[] = [
   {skill: "HTML",
     cool: false},
   {skill: "Photoshop",
@@ -35,7 +35,7 @@ let skills = [
   {skill: "Boolin'",
     cool: true}
 ];
-console.log("Name: " + name.toUpperCase());
+console.log("Name: " + myName.toUpperCase());
 console.log("Career: " + career);
 console.log("Description: " + desc);
 console.log(" ");
@@ -52,11 +52,11 @@ function displayPosition() {
             " for " +
             experience[i].company +
             " - " +
-            experience[i].jobdescription
+            experience[i].jobDescription
             ); // listing out job info on one line
         };
     };
-function displaySkills(skillName, cool) {
+function displaySkills(skillName: string, cool: boolean) {
     if (cool == true) {
         console.log("* " + "BAM: " + skillName);
     } else {

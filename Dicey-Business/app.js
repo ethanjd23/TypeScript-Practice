@@ -33,8 +33,8 @@ function rollDie() {
     ;
 }
 ;
-var testArray = [1, 2, 3, 4, 5];
 function sumDice() {
     var sum = dieArray.reduce(function (a, b) { return a + b.value; }, 0);
     console.log(sum);
 }
+;
