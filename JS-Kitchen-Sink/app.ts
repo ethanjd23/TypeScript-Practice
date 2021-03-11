@@ -1,10 +1,11 @@
-let myName: string = "Ethan"; //my name
-const numberOfStates: number = 50; //number of states doesn't change
-let nine: number = 5 + 4; //addition
+let myName = "Ethan"; //my name
+const numberOfStates = 50; //number of states doesn't change
+let nine = 5 + 4; //addition
 function sayHello() {
   alert("Hello World!");
 }
 sayHello();
+
 function checkAge(name: string, age: number) {
   if (age < 21) {
     alert("Sorry " + name + ", you aren't old enough to view this page!");
@@ -14,7 +15,8 @@ checkAge("Charles", 21);
 checkAge("Abby", 27);
 checkAge("James", 18);
 checkAge("John", 17);
-let myFavoriteVegetables: Array<string> = [
+
+let myFavoriteVegetables: string[] = [
   "Carrots",
   "Beets",
   "Potatoes",
@@ -24,12 +26,14 @@ let myFavoriteVegetables: Array<string> = [
 for (let i = 0; i < myFavoriteVegetables.length; i++) {
   console.log(myFavoriteVegetables[i]);
 } // loop to display all vegetables in the array
+
 let pet = {
   name: "Rosie",
   breed: "Miniature Pinscher",
 };
 console.log(pet);
-let friends: {name: string, age: number}[] = [
+
+let friends: { name: string; age: number }[] = [
   { name: "Abbie", age: 22 },
   { name: "Emily", age: 19 },
   { name: "Jared", age: 13 },
@@ -39,6 +43,7 @@ let friends: {name: string, age: number}[] = [
 for (let i = 0; i < friends.length; i++) {
   checkAge(friends[i].name, friends[i].age);
 } // checks age of objects in the friends array
+
 function getLength(word: string) {
   let stringlength = word.length;
   if (stringlength % 2 == 0) {

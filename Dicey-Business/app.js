@@ -1,40 +1,40 @@
-let diceContainer = document.getElementById('dice-container');
-let diceGenerator = document.getElementById("btn-generator");
-let diceRoller = document.getElementById("btn-roller");
-let diceSumButton = document.getElementById("btn-sum")
-let dieArray = [];
-
-class Dice {
-    constructor() {
+var diceContainer = document.getElementById('dice-container');
+var diceGenerator = document.getElementById("btn-generator");
+var diceRoller = document.getElementById("btn-roller");
+var diceSumButton = document.getElementById("btn-sum");
+var dieArray = [];
+var Dice = /** @class */ (function () {
+    function Dice() {
         this.container = document.createElement('div');
         this.container.className = 'dice';
         diceContainer.appendChild(this.container);
     }
-    
-    roll() {
+    Dice.prototype.roll = function () {
         this.value = Math.floor(Math.random() * 6) + 1;
-        this.container.textContent = this.value;
-    }
-}; 
-
-diceGenerator.addEventListener("click", makeNewDice);    
+        this.container.textContent = String(this.value);
+    };
+    return Dice;
+}());
+;
+diceGenerator.addEventListener("click", makeNewDice);
 diceRoller.addEventListener("click", rollDie);
 diceSumButton.addEventListener("click", sumDice);
-
-
 function makeNewDice() {
-    let newDice = new Dice();
+    var newDice = new Dice();
     newDice.roll();
     dieArray.push(newDice);
-};
-
+}
+;
 function rollDie() {
-    for(let item of dieArray) {
+    for (var _i = 0, dieArray_1 = dieArray; _i < dieArray_1.length; _i++) {
+        var item = dieArray_1[_i];
         item.roll();
-    };
-};
-
+    }
+    ;
+}
+;
+var testArray = [1, 2, 3, 4, 5];
 function sumDice() {
-    // let sum = dieArray.reduce((acc, b) => a + b, 0)
-    console.log(dieArray);
+    var sum = dieArray.reduce(function (a, b) { return a + b.value; }, 0);
+    console.log(sum);
 }
