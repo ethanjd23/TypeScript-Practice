@@ -1,7 +1,7 @@
-let diceContainer = document.getElementById('dice-container');
-let diceGenerator = document.getElementById("btn-generator");
-let diceRoller = document.getElementById("btn-roller");
-let diceSumButton = document.getElementById("btn-sum");
+let diceContainer = document.getElementById('dice-container')! as HTMLDivElement;
+let diceGenerator = document.getElementById("btn-generator")! as HTMLButtonElement;
+let diceRoller = document.getElementById("btn-roller")! as HTMLButtonElement;
+let diceSumButton = document.getElementById("btn-sum")! as HTMLButtonElement;
 let dieArray: Dice[] = [];
 
 class Dice {
